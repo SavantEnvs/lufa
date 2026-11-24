@@ -1,0 +1,9 @@
+project: savantenvs/lufa
+target: hid_bootloader_cli
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hid_bootloader_cli/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/hid_bootloader_cli -mmcu=atmega32u4 -v @@
+    afl: true
+    timeout: 10

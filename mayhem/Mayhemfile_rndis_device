@@ -1,0 +1,9 @@
+project: savantenvs/lufa
+target: rndis_device
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rndis_device/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_rndis_device
+    libfuzzer: true
+    timeout: 10

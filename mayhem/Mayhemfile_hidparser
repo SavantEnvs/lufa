@@ -1,0 +1,9 @@
+project: savantenvs/lufa
+target: hidparser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hidparser/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_hidparser
+    libfuzzer: true
+    timeout: 10

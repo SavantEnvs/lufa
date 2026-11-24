@@ -1,0 +1,6 @@
+err=0 items=5 usingids=0
+item0 type=0 off=0 bits=1 page=0x09 usage=0x01 min=0 max=1 ok=1 value=1
+item1 type=0 off=1 bits=1 page=0x09 usage=0x02 min=0 max=1 ok=1 value=0
+item2 type=0 off=2 bits=1 page=0x09 usage=0x03 min=0 max=1 ok=1 value=1
+item3 type=0 off=8 bits=8 page=0x01 usage=0x30 min=129 max=127 ok=1 value=251
+item4 type=0 off=16 bits=8 page=0x01 usage=0x31 min=129 max=127 ok=1 value=16

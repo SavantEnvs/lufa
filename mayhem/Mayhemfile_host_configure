@@ -1,0 +1,11 @@
+project: savantenvs/lufa
+target: host_configure
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/host_configure/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_host_configure
+    libfuzzer: true
+    # Upstream hang: a descriptor with bLength 0 makes USB_GetNextDescriptorComp (ConfigDescriptors.c)
+    # loop forever, so many mutants hang. A short per-exec bound keeps them from eating the run.
+    timeout: 2

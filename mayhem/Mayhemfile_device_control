@@ -1,0 +1,9 @@
+project: savantenvs/lufa
+target: device_control
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/device_control/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_device_control
+    libfuzzer: true
+    timeout: 10

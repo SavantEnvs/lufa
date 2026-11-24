@@ -1,0 +1,9 @@
+project: savantenvs/lufa
+target: mass_storage
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mass_storage/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_mass_storage
+    libfuzzer: true
+    timeout: 10

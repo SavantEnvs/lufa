@@ -1,0 +1,9 @@
+project: savantenvs/lufa
+target: bootloader_dfu
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bootloader_dfu/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_bootloader_dfu
+    libfuzzer: true
+    timeout: 10
